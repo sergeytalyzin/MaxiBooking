@@ -20,6 +20,7 @@ const promises = URLS.map(url=>sendRequest(url))
 class Main  extends React.PureComponent {
  constructor() {
    super();
+   this.interval;
    this.state = {
      curs:''
    }
@@ -27,7 +28,10 @@ class Main  extends React.PureComponent {
 
  componentDidMount() {
    this.runPromises(promises)
-   setInterval(()=>{this.runPromises(promises)},10000)
+   this.interval =  setInterval(()=>{this.runPromises(promises)},10000)
+ }
+ componentWillUnmount() {
+   clearInterval(this.interval)
  }
 
   runPromises(promises)  {
