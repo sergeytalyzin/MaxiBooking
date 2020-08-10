@@ -49,7 +49,7 @@ module.exports = {
     host: `0.0.0.0`,
     contentBase: path.join(__dirname, `public`),
     inline: true,
-    port: 5355,
+    port: 5555,
     historyApiFallback: true,
   },
   plugins: [

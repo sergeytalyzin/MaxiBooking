@@ -1,3 +1,2 @@
-test for MaxiBooking
-for start run command "npm start"
-looking forward for response
+ before start write npm install
+ start - "npm start"
